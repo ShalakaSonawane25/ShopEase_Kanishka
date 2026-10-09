@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "name": "Aura Studio Wireless Headphones",
+    "price": 8999,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    "description": "Immerse yourself in studio-grade acoustic clarity. Features active noise cancellation, 40-hour continuous playback, and premium leatherette ear cushions for all-day listening comfort."
+  },
+  {
+    "id": "2",
+    "name": "Nordic Mechanical Keychron",
+    "price": 6499,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+    "description": "Crafted with custom tactile switches, an anodized aluminum frame, and customizable warm backlit illumination. Designed for developers, writers, and minimalist setup lovers."
+  },
+  {
+    "id": "3",
+    "name": "Echo ANC Wireless Pods",
+    "price": 4299,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+    "description": "Ultra-compact true wireless earbuds offering spatial audio, IPX5 water resistance, and smart touch controls with a pocketable wireless charging case."
+  },
+  {
+    "id": "4",
+    "name": "Komorebi Portable Bluetooth Speaker",
+    "price": 7499,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80",
+    "description": "Delivers 360-degree omnidirectional sound with deep bass and crystal clear highs. Wrapped in durable acoustic fabric with 20-hour battery stamina."
+  },
+  {
+    "id": "5",
+    "name": "Heritage Leather Wristwatch",
+    "price": 5499,
+    "category": "Fashion",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80",
+    "description": "Timeless analog watch featuring a surgical stainless steel case, sapphire-coated crystal glass, and a genuine vegetable-tanned leather strap."
+  },
+  {
+    "id": "6",
+    "name": "Organic Heavyweight Hoodie",
+    "price": 2899,
+    "category": "Fashion",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+    "description": "Tailored from 100% organic combed cotton with a plush fleece interior. Designed with a double-lined hood, dropped shoulders, and a cozy relaxed fit."
+  },
+  {
+    "id": "7",
+    "name": "Canvas Weekender Duffle Bag",
+    "price": 4799,
+    "category": "Fashion",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+    "description": "Spacious and durable travel companion constructed from water-repellent canvas and full-grain leather accents. Features a dedicated shoe compartment and laptop sleeve."
+  },
+  {
+    "id": "8",
+    "name": "Linen Slub Casual Shirt",
+    "price": 2199,
+    "category": "Fashion",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+    "description": "Breathable 100% pure linen shirt crafted for effortless elegance. Pre-washed for superior softness and a relaxed drape suitable for work or leisure."
+  },
+  {
+    "id": "9",
+    "name": "Artisan Ceramic Pour-Over Set",
+    "price": 1899,
+    "category": "Home",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
+    "description": "Handcrafted matte ceramic coffee dripper paired with a thermal glass carafe. Engineered with internal ribs for optimal brew extraction and rich aroma."
+  },
+  {
+    "id": "10",
+    "name": "Sculptural Desk Task Lamp",
+    "price": 3699,
+    "category": "Home",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+    "description": "Modern architectural task light with stepless dimming, adjustable arm, and eye-caring warm LED glow. Blends warm minimalism with functional design."
+  },
+  {
+    "id": "11",
+    "name": "Botanical Soy Wax Candle",
+    "price": 1299,
+    "category": "Home",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80",
+    "description": "Hand-poured 100% natural soy wax infused with essential oils of wild cedar, bergamot, and white tea. Comes in a reusable ceramic vessel with a wooden wick."
+  },
+  {
+    "id": "12",
+    "name": "Solid Walnut Monitor Stand",
+    "price": 3199,
+    "category": "Home",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    "description": "Ergonomic desk riser carved from solid American walnut wood. Elevates your monitor to eye level while freeing up desk space for your keyboard and accessories."
+  }
+]
