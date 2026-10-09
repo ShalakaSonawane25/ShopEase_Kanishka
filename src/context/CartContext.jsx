@@ -12,8 +12,14 @@ export const CartProvider = ({ children }) => {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
-          // Validate items have id, price, and valid quantity
-          return parsed.filter(item => item && item.id && typeof item.price === 'number' && item.quantity > 0);
+          // Validate items have valid id, price, and positive quantity, normalize id to number
+          return parsed
+            .filter(item => item && item.id !== undefined && item.id !== null && typeof item.price === 'number' && item.quantity > 0)
+            .map(item => ({
+              ...item,
+              id: Number(item.id),
+              quantity: parseInt(item.quantity, 10) || 1
+            }));
         }
       }
     } catch (err) {
@@ -31,47 +37,57 @@ export const CartProvider = ({ children }) => {
     }
   }, [cart]);
 
-  // Add product to cart with optional quantity (default 1)
-  const addToCart = (product, quantityToAdd = 1) => {
-    if (!product || !product.id) return;
+  // Add product to cart with optional quantity; isExact sets the exact quantity if item already exists
+  const addToCart = (product, quantityToAdd = 1, isExact = false) => {
+    if (!product || product.id === undefined || product.id === null) return;
+    const numId = Number(product.id);
     const qty = Math.max(1, parseInt(quantityToAdd, 10) || 1);
 
     setCart(prevCart => {
-      const existingIndex = prevCart.findIndex(item => item.id === product.id);
+      const existingIndex = prevCart.findIndex(item => Number(item.id) === numId);
       if (existingIndex > -1) {
         return prevCart.map((item, index) =>
           index === existingIndex
-            ? { ...item, quantity: item.quantity + qty }
+            ? { ...item, quantity: isExact ? qty : item.quantity + qty }
             : item
         );
       }
-      return [...prevCart, { ...product, quantity: qty }];
+      return [...prevCart, { ...product, id: numId, quantity: qty }];
     });
   };
 
   // Update item quantity; removes if <= 0
   const updateQuantity = (productId, newQuantity) => {
+    const numId = Number(productId);
     const qty = parseInt(newQuantity, 10);
     if (isNaN(qty) || qty <= 0) {
-      removeFromCart(productId);
+      removeFromCart(numId);
       return;
     }
 
     setCart(prevCart =>
       prevCart.map(item =>
-        item.id === productId ? { ...item, quantity: qty } : item
+        Number(item.id) === numId ? { ...item, quantity: qty } : item
       )
     );
   };
 
   // Remove single product by ID
   const removeFromCart = (productId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+    const numId = Number(productId);
+    setCart(prevCart => prevCart.filter(item => Number(item.id) !== numId));
   };
 
   // Clear all items from cart
   const clearCart = () => {
     setCart([]);
+  };
+
+  // Get quantity of a product currently in the cart (0 if not in cart)
+  const getItemQuantity = (productId) => {
+    const numId = Number(productId);
+    const item = cart.find(i => Number(i.id) === numId);
+    return item ? item.quantity : 0;
   };
 
   // Calculate total items (sum of quantities)
@@ -100,6 +116,7 @@ export const CartProvider = ({ children }) => {
         updateQuantity,
         removeFromCart,
         clearCart,
+        getItemQuantity,
         totalItems,
         cartTotal,
         formatINR

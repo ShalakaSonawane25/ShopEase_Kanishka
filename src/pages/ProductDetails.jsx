@@ -5,15 +5,32 @@ import { useCart } from '../context/CartContext';
 
 export default function ProductDetails() {
   const { id } = useParams();
-  const { addToCart, formatINR } = useCart();
-  const [quantity, setQuantity] = useState(1);
+  const numericId = Number(id);
+  const { cart, addToCart, formatINR } = useCart();
   const [imgError, setImgError] = useState(false);
   const [addedAlert, setAddedAlert] = useState(false);
 
-  // Look up product by id (compare as strings)
+  // Look up product by numeric id
   const product = useMemo(() => {
-    return productsData.find((p) => String(p.id) === String(id));
-  }, [id]);
+    if (isNaN(numericId)) return null;
+    return productsData.find((p) => Number(p.id) === numericId);
+  }, [numericId]);
+
+  // Track previous ID to reset quantity when route param changes
+  const [prevId, setPrevId] = useState(numericId);
+
+  // Initialize quantity from existing cart item if available, otherwise default to 1
+  const [quantity, setQuantity] = useState(() => {
+    const itemInCart = cart.find((item) => Number(item.id) === numericId);
+    return itemInCart ? itemInCart.quantity : 1;
+  });
+
+  // Adjust state during render when product ID changes (React recommended pattern)
+  if (prevId !== numericId) {
+    setPrevId(numericId);
+    const itemInCart = cart.find((item) => Number(item.id) === numericId);
+    setQuantity(itemInCart ? itemInCart.quantity : 1);
+  }
 
   // Handle Invalid Product ID State
   if (!product) {
@@ -68,7 +85,8 @@ export default function ProductDetails() {
   };
 
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    // Add to cart with isExact = true to set the exact selected quantity
+    addToCart(product, quantity, true);
     setAddedAlert(true);
     setTimeout(() => {
       setAddedAlert(false);

@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Aura Studio Wireless Headphones",
     "price": 8999,
     "category": "Electronics",
@@ -9,7 +9,7 @@
     "description": "Immerse yourself in studio-grade acoustic clarity. Features active noise cancellation, 40-hour continuous playback, and premium leatherette ear cushions for all-day listening comfort."
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Nordic Mechanical Keychron",
     "price": 6499,
     "category": "Electronics",
@@ -18,7 +18,7 @@
     "description": "Crafted with custom tactile switches, an anodized aluminum frame, and customizable warm backlit illumination. Designed for developers, writers, and minimalist setup lovers."
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Echo ANC Wireless Pods",
     "price": 4299,
     "category": "Electronics",
@@ -27,7 +27,7 @@
     "description": "Ultra-compact true wireless earbuds offering spatial audio, IPX5 water resistance, and smart touch controls with a pocketable wireless charging case."
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "Komorebi Portable Bluetooth Speaker",
     "price": 7499,
     "category": "Electronics",
@@ -36,7 +36,7 @@
     "description": "Delivers 360-degree omnidirectional sound with deep bass and crystal clear highs. Wrapped in durable acoustic fabric with 20-hour battery stamina."
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "Heritage Leather Wristwatch",
     "price": 5499,
     "category": "Fashion",
@@ -45,7 +45,7 @@
     "description": "Timeless analog watch featuring a surgical stainless steel case, sapphire-coated crystal glass, and a genuine vegetable-tanned leather strap."
   },
   {
-    "id": "6",
+    "id": 6,
     "name": "Organic Heavyweight Hoodie",
     "price": 2899,
     "category": "Fashion",
@@ -54,7 +54,7 @@
     "description": "Tailored from 100% organic combed cotton with a plush fleece interior. Designed with a double-lined hood, dropped shoulders, and a cozy relaxed fit."
   },
   {
-    "id": "7",
+    "id": 7,
     "name": "Canvas Weekender Duffle Bag",
     "price": 4799,
     "category": "Fashion",
@@ -63,7 +63,7 @@
     "description": "Spacious and durable travel companion constructed from water-repellent canvas and full-grain leather accents. Features a dedicated shoe compartment and laptop sleeve."
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "Linen Slub Casual Shirt",
     "price": 2199,
     "category": "Fashion",
@@ -72,7 +72,7 @@
     "description": "Breathable 100% pure linen shirt crafted for effortless elegance. Pre-washed for superior softness and a relaxed drape suitable for work or leisure."
   },
   {
-    "id": "9",
+    "id": 9,
     "name": "Artisan Ceramic Pour-Over Set",
     "price": 1899,
     "category": "Home",
@@ -81,7 +81,7 @@
     "description": "Handcrafted matte ceramic coffee dripper paired with a thermal glass carafe. Engineered with internal ribs for optimal brew extraction and rich aroma."
   },
   {
-    "id": "10",
+    "id": 10,
     "name": "Sculptural Desk Task Lamp",
     "price": 3699,
     "category": "Home",
@@ -90,7 +90,7 @@
     "description": "Modern architectural task light with stepless dimming, adjustable arm, and eye-caring warm LED glow. Blends warm minimalism with functional design."
   },
   {
-    "id": "11",
+    "id": 11,
     "name": "Botanical Soy Wax Candle",
     "price": 1299,
     "category": "Home",
@@ -99,7 +99,7 @@
     "description": "Hand-poured 100% natural soy wax infused with essential oils of wild cedar, bergamot, and white tea. Comes in a reusable ceramic vessel with a wooden wick."
   },
   {
-    "id": "12",
+    "id": 12,
     "name": "Solid Walnut Monitor Stand",
     "price": 3199,
     "category": "Home",
